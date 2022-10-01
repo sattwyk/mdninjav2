@@ -8,13 +8,13 @@ const getCurrentTheme = () => {
   return 'light';
 };
 
-export const useThemeChange = () => {
-  const [theme, setTheme] = useState(getCurrentTheme());
+export const useTheme = () => {
+  const [theme, setTheme] = useState<string>(getCurrentTheme());
 
   useEffect(() => {
     const html = document.querySelector('html');
     html?.setAttribute('data-theme', theme);
   }, [theme]);
 
-  return setTheme;
+  return [theme, setTheme] as [string, React.SetStateAction<string>];
 };
