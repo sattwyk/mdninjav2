@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
-import './App.css';
 import { useThemeChange } from './hooks/useThemeChange';
+import NavBar from './components/NavBar';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className='App'>
+      <NavBar />
       <div>
         <a href='https://vitejs.dev' target='_blank'>
           <img src='/vite.svg' className='logo' alt='Vite logo' />
