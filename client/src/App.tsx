@@ -1,4 +1,4 @@
-import NavBar from '@/components/NavBar';
+import { NavBar, SideBar } from '@/components';
 
 import { useTheme } from '@/hooks/useTheme';
 import { ThemeContext } from '@/context';
@@ -9,7 +9,8 @@ function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <div className='App'>
-        <NavBar />
+        <NavBar changeTheme={changeTheme} />
+        <SideBar />
       </div>
     </ThemeContext.Provider>
   );
