@@ -10,7 +10,9 @@ function App() {
     <ThemeContext.Provider value={theme}>
       <div className='App'>
         <NavBar changeTheme={changeTheme} />
-        <SideBar />
+        <SideBar>
+          <h1>Hello World</h1>
+        </SideBar>
       </div>
     </ThemeContext.Provider>
   );
